@@ -20,3 +20,15 @@ Set these **Application settings** in your Azure Static Web App:
 - `NEWSLETTER_TO` (optional, defaults to `newsletter@andres.ch`)
 
 After saving settings, redeploy (or restart) the Static Web App so the API picks up the values.
+
+
+## Setup
+checkout
+
+```
+cd src
+npm update
+npm start
+```
+
+
