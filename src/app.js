@@ -99,36 +99,67 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Navigation Toggle
     const navToggle = document.querySelector('.mobile-nav-toggle');
     const primaryNav = document.getElementById('primary-navigation');
-    const navIcon = navToggle.querySelector('i');
+    const navIcon = navToggle ? navToggle.querySelector('i') : null;
 
-    navToggle.addEventListener('click', () => {
-        const isVisible = primaryNav.getAttribute('data-visible');
-
-        if (isVisible === 'false') {
-            primaryNav.setAttribute('data-visible', 'true');
-            navToggle.setAttribute('aria-expanded', 'true');
-            navIcon.classList.remove('fa-bars');
-            navIcon.classList.add('fa-xmark');
-        } else {
-            primaryNav.setAttribute('data-visible', 'false');
-            navToggle.setAttribute('aria-expanded', 'false');
-            navIcon.classList.remove('fa-xmark');
-            navIcon.classList.add('fa-bars');
+    const setMobileMenuState = (isOpen) => {
+        if (!primaryNav || !navToggle || !navIcon) {
+            return;
         }
-    });
+
+        primaryNav.setAttribute('data-visible', isOpen ? 'true' : 'false');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        navIcon.classList.toggle('fa-bars', !isOpen);
+        navIcon.classList.toggle('fa-xmark', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+    };
+
+    if (navToggle && primaryNav && navIcon) {
+        navToggle.addEventListener('click', () => {
+            const isVisible = primaryNav.getAttribute('data-visible') === 'true';
+            setMobileMenuState(!isVisible);
+        });
+    }
 
     // Close mobile menu on link click
     const navLinks = document.querySelectorAll('.primary-navigation a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
-                primaryNav.setAttribute('data-visible', 'false');
-                navToggle.setAttribute('aria-expanded', 'false');
-                navIcon.classList.remove('fa-xmark');
-                navIcon.classList.add('fa-bars');
+                setMobileMenuState(false);
             }
         });
     });
+
+    if (primaryNav && navToggle) {
+        document.addEventListener('click', (event) => {
+            if (window.innerWidth > 768) {
+                return;
+            }
+
+            const isVisible = primaryNav.getAttribute('data-visible') === 'true';
+            if (!isVisible) {
+                return;
+            }
+
+            const clickedInsideNav = primaryNav.contains(event.target);
+            const clickedToggle = navToggle.contains(event.target);
+            if (!clickedInsideNav && !clickedToggle) {
+                setMobileMenuState(false);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                setMobileMenuState(false);
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && primaryNav.getAttribute('data-visible') === 'true') {
+                setMobileMenuState(false);
+            }
+        });
+    }
 
     // Sticky Header Color Change on Scroll
     const header = document.getElementById('header');

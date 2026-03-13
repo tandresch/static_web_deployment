@@ -8,3 +8,4 @@ srv/package-lock.json
 srv/package.json
 src/.env
 src/.env.local  
+src/data/newsletter-signups.jsonl
