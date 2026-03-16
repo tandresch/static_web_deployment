@@ -373,11 +373,61 @@ document.addEventListener('DOMContentLoaded', () => {
     const newsModal = document.getElementById('news-modal');
     const modalClose = document.querySelector('.modal-close');
     const newsItems = document.querySelectorAll('.news-item');
+    const modalImage = newsModal ? newsModal.querySelector('.modal-image') : null;
+    const modalBadge = document.getElementById('modal-badge');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDate = document.getElementById('modal-date');
+    const modalExcerpt = document.getElementById('modal-excerpt');
+    const modalDetails = document.getElementById('modal-details');
+
+    const newsModalEntries = {
+        'team-presentation': {
+            image: 'images/Teampresentation2.jpg',
+            badge: 'TEAM NEWS',
+            title: 'Team Presentation kicks off the 2026 season',
+            date: 'March 16, 2026',
+            excerpt: 'A memorable evening celebrating our team, our sponsors and the start of a new season.',
+            details: 'Last week, the team gathered at the Thorvald Ellegaard Lounge in the Ballerup Super Arena for our annual presentation, where riders, sponsors and guests connected ahead of the upcoming race season.'
+        },
+        'european-championships': {
+            image: 'images/Worldrecord26.jpg',
+            badge: 'EUROPEAN CHAMPIONSHIPS',
+            title: 'Gold, silver and a world record for our TTD riders',
+            date: 'March 5, 2026',
+            excerpt: 'The European Championships were a great success for the Danish team and our Track Team Denmark riders. In total, five riders from our team represented their countries in Konya, Turkey.',
+            details: 'Lasse Norman Leth, Robin Skivild, and Rasmus Lund claimed the European title in the team pursuit with an outstanding performance, even going under the world record.'
+        }
+    };
+
+    const populateNewsModal = (newsId) => {
+        const fallbackId = 'european-championships';
+        const entry = newsModalEntries[newsId] || newsModalEntries[fallbackId];
+
+        if (modalImage) {
+            modalImage.style.backgroundImage = `url('${entry.image}')`;
+        }
+        if (modalBadge) {
+            modalBadge.textContent = entry.badge;
+        }
+        if (modalTitle) {
+            modalTitle.textContent = entry.title;
+        }
+        if (modalDate) {
+            modalDate.textContent = entry.date;
+        }
+        if (modalExcerpt) {
+            modalExcerpt.textContent = entry.excerpt;
+        }
+        if (modalDetails) {
+            modalDetails.textContent = entry.details;
+        }
+    };
 
     if (newsModal) {
         // Open modal on news item click
         newsItems.forEach(item => {
             item.addEventListener('click', () => {
+                populateNewsModal(item.getAttribute('data-news-id'));
                 newsModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });

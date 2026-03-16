@@ -79,7 +79,7 @@ h6 {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-size: clamp(2rem, 4vw, 3.75rem);
 }
 
 h2 {
@@ -467,6 +467,7 @@ img {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    padding-bottom: 10vh;
 }
 
 .hero-bg {
@@ -1396,6 +1397,7 @@ img {
 
 .featured-news-excerpt {
     font-size: 1.1rem;
+    font-weight: 700;
     line-height: 1.6;
     color: #666;
     margin-bottom: var(--space-lg);
