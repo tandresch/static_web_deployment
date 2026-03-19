@@ -384,9 +384,9 @@ document.addEventListener('DOMContentLoaded', () => {
         'team-presentation': {
             image: 'images/Teampresentation2.jpg',
             badge: 'TEAM NEWS',
-            title: 'Team Presentation kicks off the 2026 season',
+            title: 'Team Presentation kicked off the 2026 season',
             date: 'March 16, 2026',
-            excerpt: 'A memorable evening celebrating our team, our sponsors and the start of a new season.',
+            excerpt: 'A memorable evening that celebrated our team, our sponsors and the start of a new season.',
             details: 'Last week, the team gathered at the Thorvald Ellegaard Lounge in the Ballerup Super Arena for our annual presentation, where riders, sponsors and guests connected ahead of the upcoming race season.'
         },
         'european-championships': {
