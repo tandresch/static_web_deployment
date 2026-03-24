@@ -2126,12 +2126,17 @@ img {
         background-position: center 38%;
     }
 
+    #home.hero {
+        align-items: flex-end;
+        padding-bottom: clamp(1rem, 4vh, 2rem);
+    }
+
     #home .hero-content {
-        margin-top: clamp(3.5rem, 12vh, 6rem);
+        margin-top: 0;
     }
 
     #home .hero-content h1 {
-        font-size: clamp(1.35rem, 6vw, 1.95rem);
+        font-size: clamp(1.1rem, 5.4vw, 1.5rem);
         line-height: 1.15;
         margin-bottom: 0;
     }
@@ -2247,12 +2252,12 @@ img {
         background-position: center 34%;
     }
 
-    #home .hero-content {
-        margin-top: clamp(4.5rem, 16vh, 7rem);
+    #home.hero {
+        padding-bottom: clamp(0.75rem, 3.5vh, 1.5rem);
     }
 
     #home .hero-content h1 {
-        font-size: clamp(1.2rem, 6.4vw, 1.6rem);
+        font-size: clamp(0.95rem, 5.5vw, 1.25rem);
     }
 
     .mt-mobile-2 {
