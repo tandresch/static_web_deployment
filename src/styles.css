@@ -2133,11 +2133,11 @@ img {
 
     #home .hero-content {
         margin-top: 0;
-        margin-bottom: -25px;
+        margin-bottom: 25px;
     }
 
     #home .hero-content h1 {
-        font-size: clamp(1.1rem, 5.4vw, 1.5rem);
+        font-size: clamp(1.6rem, 7.2vw, 2rem);
         line-height: 1.15;
         margin-bottom: 0;
     }
@@ -2258,11 +2258,11 @@ img {
     }
 
     #home .hero-content {
-        margin-bottom: -25px;
+        margin-bottom: 25px;
     }
 
     #home .hero-content h1 {
-        font-size: clamp(0.95rem, 5.5vw, 1.25rem);
+        font-size: clamp(1.35rem, 8vw, 1.8rem);
     }
 
     .mt-mobile-2 {
