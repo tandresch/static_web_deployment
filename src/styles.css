@@ -2122,6 +2122,14 @@ img {
         height: calc(100% + 2px);
     }
 
+    #home .hero-bg {
+        background-position: center 38%;
+    }
+
+    #home .hero-content {
+        margin-top: clamp(3.5rem, 12vh, 6rem);
+    }
+
     .mobile-nav-toggle {
         display: inline-flex;
         z-index: 1200;
@@ -2222,6 +2230,14 @@ img {
         min-height: 420px;
         height: 80vh;
         height: 80dvh;
+    }
+
+    #home .hero-bg {
+        background-position: center 34%;
+    }
+
+    #home .hero-content {
+        margin-top: clamp(4.5rem, 16vh, 7rem);
     }
 
     .mt-mobile-2 {
