@@ -2106,6 +2106,12 @@ img {
         padding: 3rem 0;
     }
 
+    .page-intro-title.reveal-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
     .header,
     .header.scrolled {
         border-bottom: none;
@@ -2126,6 +2132,7 @@ img {
 
     #home .hero-bg {
         background-position: center 38%;
+        transform: translateX(-12px) scale(1.05);
     }
 
     #home .hero-content {
@@ -2135,9 +2142,9 @@ img {
         bottom: 140px;
         margin: 0 auto;
         width: min(88vw, 800px);
-        max-width: calc(100vw - 2rem - env(safe-area-inset-right, 0px));
-        padding: 0 calc(0.5rem + env(safe-area-inset-right, 0px)) 0 1.25rem;
-        transform: translateX(10px);
+        max-width: calc(100vw - 2rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+        padding: 0 max(1rem, env(safe-area-inset-right, 0px)) 0 max(1rem, env(safe-area-inset-left, 0px));
+        transform: none;
     }
 
     #home .hero-content h1 {
@@ -2257,14 +2264,15 @@ img {
 
     #home .hero-bg {
         background-position: center 34%;
+        transform: translateX(-10px) scale(1.05);
     }
 
     #home .hero-content {
         bottom: 120px;
         width: min(90vw, 800px);
-        max-width: calc(100vw - 1.25rem - env(safe-area-inset-right, 0px));
-        padding: 0 calc(0.35rem + env(safe-area-inset-right, 0px)) 0 1rem;
-        transform: translateX(8px);
+        max-width: calc(100vw - 1.5rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+        padding: 0 max(0.75rem, env(safe-area-inset-right, 0px)) 0 max(0.75rem, env(safe-area-inset-left, 0px));
+        transform: none;
     }
 
     #home .hero-content h1 {
