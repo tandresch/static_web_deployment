@@ -2134,8 +2134,10 @@ img {
         right: 0;
         bottom: 140px;
         margin: 0 auto;
-        width: min(92vw, 800px);
-        padding: 0 1rem;
+        width: min(88vw, 800px);
+        max-width: calc(100vw - 2rem - env(safe-area-inset-right, 0px));
+        padding: 0 calc(0.5rem + env(safe-area-inset-right, 0px)) 0 1.25rem;
+        transform: translateX(10px);
     }
 
     #home .hero-content h1 {
@@ -2259,6 +2261,10 @@ img {
 
     #home .hero-content {
         bottom: 120px;
+        width: min(90vw, 800px);
+        max-width: calc(100vw - 1.25rem - env(safe-area-inset-right, 0px));
+        padding: 0 calc(0.35rem + env(safe-area-inset-right, 0px)) 0 1rem;
+        transform: translateX(8px);
     }
 
     #home .hero-content h1 {
