@@ -2179,7 +2179,7 @@ img {
         width: min(88vw, 800px);
         max-width: calc(100vw - 2rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
         padding: 0 max(1rem, env(safe-area-inset-right, 0px)) 0 max(1rem, env(safe-area-inset-left, 0px));
-        transform: translateX(calc(-50% - 15px));
+        transform: translateX(calc(-50% - 20px));
         text-align: center;
     }
 
@@ -2309,7 +2309,7 @@ img {
         width: min(90vw, 800px);
         max-width: calc(100vw - 1.5rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
         padding: 0 max(0.75rem, env(safe-area-inset-right, 0px)) 0 max(0.75rem, env(safe-area-inset-left, 0px));
-        transform: translateX(calc(-50% - 15px));
+        transform: translateX(calc(-50% - 20px));
     }
 
     #home .hero-content h1 {
