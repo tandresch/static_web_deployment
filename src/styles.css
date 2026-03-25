@@ -2149,7 +2149,7 @@ img {
 
     .page-intro-title .section-title {
         font-size: clamp(1.4rem, 6vw, 2rem);
-        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
     }
 
     .header,
@@ -2289,11 +2289,11 @@ img {
 
 @media (max-width: 500px) {
     .container {
-        padding: 0 1rem;
+        padding: 1 1rem;
     }
 
     .section {
-        padding: 2.5rem 0;
+        padding: 5.0rem 0;
     }
 
     .hero {
@@ -2331,7 +2331,7 @@ img {
     }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (hover: none), (pointer: coarse) {   
     .bg-parallax {
         background-attachment: scroll;
     }
