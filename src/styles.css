@@ -202,7 +202,10 @@ img {
 }
 
 .section {
-    padding: var(--space-xxl) 0;
+    padding-top: 6rem;
+    padding-right: 0px;
+    padding-bottom: 5rem;
+    padding-left: 0px;
 }
 
 .section-dark {
@@ -1988,7 +1991,10 @@ img {
     }
 
     .section {
-        padding: 2.5rem 0;
+        padding-top: 1rem;
+        padding-right: 0px;
+        padding-bottom: 1rem;
+        padding-left: 0px;
     }
 
     .hero {
@@ -2102,8 +2108,13 @@ img {
 }
 
 @media (max-width: 768px) {
+
+
     .section {
-        padding: 3rem 0;
+        padding-top: 3rem;
+        padding-right: 0px;
+        padding-bottom: 0.5rem;
+        padding-left: 0px;
     }
 
     .reveal,
@@ -2149,7 +2160,7 @@ img {
 
     .page-intro-title .section-title {
         font-size: clamp(1.4rem, 6vw, 2rem);
-        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 
     .header,
@@ -2289,13 +2300,16 @@ img {
 
 @media (max-width: 500px) {
     .container {
-        padding: 1 1rem;
+        padding: 1 0rem;
     }
 
     .section {
-        padding: 5.0rem 0;
+        padding-top: 5rem;
+        padding-right: 0px;
+        padding-bottom: 1rem;
+        padding-left: 0px;
     }
-
+    
     .hero {
         min-height: 100vh;
         min-height: 100dvh;
