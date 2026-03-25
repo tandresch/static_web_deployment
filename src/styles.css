@@ -1581,11 +1581,11 @@ img {
 }
 
 .news-hero {
-    padding: calc(var(--header-height) + var(--safe-area-top)) 0 0;
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: grid;
-    place-items: center;
+    padding: var(--space-xxl) 0;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(135deg, rgba(10, 10, 46, 0.9) 0%, rgba(21, 21, 69, 0.9) 100%),
                 url('images/Background_3day_resized.jpg') center 10%/cover;
     text-align: center;
@@ -2179,7 +2179,7 @@ img {
         width: min(88vw, 800px);
         max-width: calc(100vw - 2rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
         padding: 0 max(1rem, env(safe-area-inset-right, 0px)) 0 max(1rem, env(safe-area-inset-left, 0px));
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 10px));
         text-align: center;
     }
 
@@ -2309,7 +2309,7 @@ img {
         width: min(90vw, 800px);
         max-width: calc(100vw - 1.5rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
         padding: 0 max(0.75rem, env(safe-area-inset-right, 0px)) 0 max(0.75rem, env(safe-area-inset-left, 0px));
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 10px));
     }
 
     #home .hero-content h1 {
