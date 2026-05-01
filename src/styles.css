@@ -202,7 +202,10 @@ img {
 }
 
 .section {
-    padding: var(--space-xxl) 0;
+    padding-top: 6rem;
+    padding-right: 0px;
+    padding-bottom: 5rem;
+    padding-left: 0px;
 }
 
 .section-dark {
@@ -1989,7 +1992,10 @@ img {
     }
 
     .section {
-        padding: 2.5rem 0;
+        padding-top: 1rem;
+        padding-right: 0px;
+        padding-bottom: 1rem;
+        padding-left: 0px;
     }
 
     .hero {
@@ -2103,8 +2109,13 @@ img {
 }
 
 @media (max-width: 768px) {
+
+
     .section {
-        padding: 3rem 0;
+        padding-top: 3rem;
+        padding-right: 0px;
+        padding-bottom: 0.5rem;
+        padding-left: 0px;
     }
 
     .reveal,
@@ -2146,6 +2157,11 @@ img {
         opacity: 1;
         transform: none;
         transition: none;
+    }
+
+    .page-intro-title .section-title {
+        font-size: clamp(1.4rem, 6vw, 2rem);
+        margin-bottom: 0.5rem;
     }
 
     .header,
@@ -2213,7 +2229,7 @@ img {
         bottom: 0.5rem;
         left: auto;
         min-width: 210px;
-        width: min(67.5vw, 285px);
+        width: min(60vw, 180px);
         max-width: calc(100vw - 1rem);
         flex-direction: column;
         align-items: stretch;
@@ -2285,13 +2301,16 @@ img {
 
 @media (max-width: 500px) {
     .container {
-        padding: 0 1rem;
+        padding: 1 0rem;
     }
 
     .section {
-        padding: 2.5rem 0;
+        padding-top: 5rem;
+        padding-right: 0px;
+        padding-bottom: 1rem;
+        padding-left: 0px;
     }
-
+    
     .hero {
         min-height: 100vh;
         min-height: 100dvh;
@@ -2321,9 +2340,13 @@ img {
     .mt-mobile-2 {
         margin-top: 0.5rem;
     }
+
+    .page-intro-title .section-title {
+        font-size: clamp(1.25rem, 7vw, 1.6rem);
+    }
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (hover: none), (pointer: coarse) {   
     .bg-parallax {
         background-attachment: scroll;
     }
