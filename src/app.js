@@ -379,40 +379,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDate = document.getElementById('modal-date');
     const modalExcerpt = document.getElementById('modal-excerpt');
     const modalDetails = document.getElementById('modal-details');
+    const modalLink = document.getElementById('modal-link');
 
     const newsModalEntries = {
         'world-cups-asia': {
             image: 'images/Weltcup_HK26169.jpg',
+            imagePosition: 'center top',
             badge: 'RACE RESULTS',
-            title: 'Two podiums at the World Cups in Asia',
+            title: 'Two World Cup podiums in Asia',
             date: 'April 22, 2026',
-            excerpt: 'Robin Skivild, Oskar Winkler and Michelle Andres travelled to the track World Cups in Hong Kong and Nilai, where they each secured a sensational podium finish.',
-            details: 'Skivild and Winkler achieved second place in the team pursuit in Hong Kong. One week later, Michelle Andres secured a strong third place in the Madison in Nilai, marking her second World Cup podium.'
+            excerpt: 'While a part of the team was competing in Ghent, Robin Skivild, Oskar Winkler and Michelle Andres travelled with their national teams to the track World Cups in Hong Kong and Nilai, where they each secured a sensational podium finish.',
+            details: '',
+            link: 'news.html#asia'
         },
         'ghent': {
             image: 'images/Gent_26_Scratchresized.jpg',
-            imagePosition: 'center 28%',
+            imagePosition: 'center 30%',
             badge: 'RACE RESULTS',
-            title: 'Double victory at the International Track Meeting in Ghent',
+            title: 'Double victory in Ghent',
             date: 'April 15, 2026',
-            excerpt: 'The European track season kicked off in mid-April in Ghent, Belgium, with a squad combining experienced riders and young talents.',
-            details: 'The team delivered an active and aggressive performance, highlighted by a one-two finish in the men\'s scratch race: Lasse Norman Leth won ahead of Rasmus Lund, securing the team\'s first UCI C1 victory of the season.'
+            excerpt: 'The European track season kicked off in mid-April with the International Track Meeting in Ghent, Belgium. With Lasse Norman Leth, Rasmus Lund, Laura Auerbach and Astrid Bjørn Sørensen, TTD travelled with a squad combining experienced riders and young talents.',
+            details: '',
+            link: 'news.html#ghent'
         },
         'team-presentation': {
             image: 'images/Teampresentation2.jpg',
             badge: 'TEAM NEWS',
-            title: 'Team Presentation kicked off the 2026 season',
+            title: 'Team presentation kicked off the 2026 season',
             date: 'March 16, 2026',
-            excerpt: 'A memorable evening that celebrated our team, our sponsors and the start of a new season.',
-            details: 'Last week, the team gathered at the Thorvald Ellegaard Lounge in the Ballerup Super Arena for our annual presentation, where riders, sponsors and guests connected ahead of the upcoming race season.'
+            excerpt: 'A memorable evening that celebrated our team, our sponsors and the start of the 2026 season.',
+            details: 'Last week, the team gathered at the Thorvald Ellegaard Lounge in the Ballerup Super Arena for our annual presentation – an evening full of energy, inspiration and connection. Lasse Norman Leth shared a guiding motto for the season: "You have to enjoy it and whatever you do, always have fun."',
+            link: 'news.html#team-presentation'
         },
         'european-championships': {
             image: 'images/Worldrecord26.jpg',
+            imagePosition: 'center top',
             badge: 'EUROPEAN CHAMPIONSHIPS',
             title: 'Gold, silver and a world record for our TTD riders',
             date: 'March 5, 2026',
             excerpt: 'The European Championships were a great success for the Danish team and our Track Team Denmark riders. In total, five riders from our team represented their countries in Konya, Turkey.',
-            details: 'Lasse Norman Leth, Robin Skivild, and Rasmus Lund claimed the European title in the team pursuit with an outstanding performance, even going under the world record.'
+            details: '',
+            link: 'news.html#european-championships'
         }
     };
 
@@ -439,6 +446,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalDetails) {
             modalDetails.textContent = entry.details;
         }
+        if (modalLink) {
+            modalLink.href = entry.link || 'news.html';
+        }
     };
 
     if (newsModal) {
@@ -447,7 +457,6 @@ document.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click', () => {
                 populateNewsModal(item.getAttribute('data-news-id'));
                 newsModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
             });
         });
 
@@ -455,7 +464,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalClose) {
             modalClose.addEventListener('click', () => {
                 newsModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
             });
         }
 
@@ -463,7 +471,6 @@ document.addEventListener('DOMContentLoaded', () => {
         newsModal.addEventListener('click', (e) => {
             if (e.target === newsModal) {
                 newsModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
             }
         });
 
@@ -471,7 +478,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && newsModal.classList.contains('active')) {
                 newsModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
             }
         });
     }
