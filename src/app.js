@@ -382,6 +382,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalLink = document.getElementById('modal-link');
 
     const newsModalEntries = {
+        'prague-podiums': {
+            image: 'images/Team_Prag.jpg',
+            imagePosition: 'center center',
+            badge: 'RACE RESULTS',
+            title: 'Six podium finishes in Prague',
+            date: 'May 14, 2026',
+            excerpt: 'The Track Team Denmark can look back on a highly successful UCI CL1 weekend in Prague, where the team delivered strong performances across multiple disciplines and made a solid mark on the international stage.',
+            details: '',
+            link: 'news.html#prague-podiums'
+        },
         'world-cups-asia': {
             image: 'images/Weltcup_HK26169.jpg',
             imagePosition: 'center top',
